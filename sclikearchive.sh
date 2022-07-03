@@ -14,3 +14,7 @@ do
   echo "archiving likes for $user"
   yt-dlp --download-archive "$OUTPUT_DIR/downloaded.txt" -cwi  --add-metadata --embed-thumbnail --output "$OUTPUT_DIR/%(uploader)s/%(title)s.%(ext)s" "https://soundcloud.com/$user/likes"
 done
+
+# clean up stray thumbnails
+echo "cleaning up stray thumbnails"
+rm "$OUTPUT_DIR/*/*.jpg"
