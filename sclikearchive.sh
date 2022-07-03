@@ -12,5 +12,5 @@ fi
 for user in ${SC_USERS[@]};
 do
   echo "archiving likes for $user"
-  yt-dlp --add-metadata --embed-thumbnail --output "$OUTPUT_DIR/%(uploader)s/%(title)s.%(ext)s" "https://soundcloud.com/$user/likes"
+  yt-dlp --download-archive "$OUTPUT_DIR/downloaded.txt" -cwi  --add-metadata --embed-thumbnail --output "$OUTPUT_DIR/%(uploader)s/%(title)s.%(ext)s" "https://soundcloud.com/$user/likes"
 done
