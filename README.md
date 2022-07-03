@@ -2,6 +2,10 @@
 
 Simple bash script to archive all liked tracks of SoundCloud users, intended for use in a regular cron task.
 
+## Dependencies
+
+For this script to work yt-dlp and ffmpeg need to be installed.
+
 ## Configuration
 
 Create a .env file in the directory the script is going to be run in.
