@@ -1,8 +1,10 @@
 #!/bin/bash
 
-# get array of SC_USERS and OUTPUT_DIR from env file
-# todo: support externally provided environment variables?
-source .env
+# get array of SC_USERS and OUTPUT_DIR from env vars or .env file
+if [[ "$SC_USERS" == "" ]]; then
+  echo "no environment variables provided, reading configuration from $(pwd)/.env"
+  source .env
+fi
 
 if [[ "$OUTPUT_DIR" == "" ]]; then
   echo "OUTPUT_DIR not set, defaulting to current directory"

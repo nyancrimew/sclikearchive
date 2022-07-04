@@ -18,6 +18,9 @@ SC_USERS=("user1" "user2" "user2")
 OUTPUT_DIR="/var/sclikearchive"
 ```
 
+Alternatively the configuration can be passed in via environment variables,
+though setting the users bash array only works when calling the script *from* bash.
+
 ## Running
 
 Now you can simply execute `sclikearchive.sh` in the same directory as the env file.
